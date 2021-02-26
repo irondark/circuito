@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor De Circuito Eléctrico de Distribución</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/materialize.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+  <div id="main-row">
+    <div id="modal-save" class="modal">
+      <div class="modal-content">
+        <h5>Nombre del archivo</h5>
+        <p><input id="filename-input" value="Nuevo Circuito" type="text"></p>
+        <div id="format-selector-wrapper" class="input-field col s12 hide">
+          <select id="format-selector">
+            <option value="" disabled selected>Elegir formato</option>
+            <option value="jpeg">JPG</option>
+            <option value="png">PNG</option>
+          </select>
+          <!-- <label>Exportar</label> -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat blue accent-4 white-text">Cerrar</a>
+        <a id="btn-save" href="#!" class="waves-effect waves-green btn green accent-5 hide">Guardar</a>
+        <a id="btn-export" href="#!" class="waves-effect btn yellow darken-3 hide">Exportar</a>
+      </div>
+    </div>
+
+    <div id="new-file-modal" class="modal">
+      <div class="modal-content">
+        <h5>¿Desea guardar los datos?</h5>
+      </div>
+      <div class="modal-footer">
+        <a id="btn-yes" href="#!" class="modal-close waves-effect waves-green btn green accent-5">SI</a>
+        <a id="btn-no" href="#!" class="modal-close waves-effect waves-green btn blue accent-4">NO</a>
+      </div>
+    </div>
+
+    <div id="modal-cambio" class="modal">
+      <div class="modal-content">
+        <h5 id="titleModal">Nombre del nodo:</h5>
+        <p><input id="nombre-nodo-input" type="text"></p>
+      </div>
+      <div class="modal-footer">
+        <a id="btn-guardar-cambio" href="#!" class="waves-effect waves-green btn blue accent-4">Guardar</a>
+        <a id="btn-cerrar-cambio" href="#!" class="waves-effect waves-red btn blue accent-4">Cerrar</a>
+      </div>
+    </div>
+
+    <div id="modal-linea" class="modal">
+      <div class="modal-dialog modal-sm">
+        <h5>Tipo de Linea de transmisión:</h5>
+        <div class="container">
+          <button id="linea-nodo1" class="col s2">
+            <img src="assets/img/icons/linea-negra.svg" width="35" title="Linea de transmisión sin llave">
+          </button>
+          <button id="linea-nodo2" class="col s2">
+            <img src="assets/img/icons/linea-roja.svg" width="35" title="Linea de transmisión con llave cerrada">
+          </button>
+          <button id="linea-nodo3" class="col s2">
+            <img src="assets/img/icons/linea-amarilla.svg" width="35" title="Linea de transmisión con llave abierta">
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a id="btn-cerrar-linea" href="#!" class="waves-effect waves-red btn blue accent-4">Cerrar</a>
+      </div>
+    </div>
+
+    <nav id="navbar" class="blue accent-4">
+      <div class="nav-wrapper">
+        <a id="logo-wrapper" class="left" href="#"><img src="assets/img/logo.png" width="60" height="60" alt="Logo PTI"
+            title="PTI"></a>
+        <ul id="menu-bar">
+          <li id="file-menu">
+            <a class="dropdown-trigger" href="#!" data-target="file-menu-dropdown">Archivo <i
+                class="material-icons right">arrow_drop_down</i></a>
+            <ul id="file-menu-dropdown" class="dropdown-content">
+              <input id="file-menu-input" type="file" style="display: none">
+              <li class="dropdown-item"><a class="dropdown-item--open" href="#!">Abrir</a></li>
+              <li class="dropdown-item"><a class="dropdown-item--new" href="#!">Nuevo</a></li>
+              <li class="dropdown-item"><a class="dropdown-item--save" href="#!">Guardar</a></li>
+              <li class="dropdown-item"><a class="dropdown-item--export" href="#!">Exportar</a> </li>
+            </ul>
+          </li>
+        </ul>
+        <ul id="quick-access">
+          <li><a id="undo" href="#!"><i class="material-icons" title="Deshacer">undo</i></a></li>
+          <li><a id="redo" href="#!"><i class="material-icons" title="Rehacer">redo</i></a></li>
+          <li><a id="quick-access--open" href="#!"><i class="material-icons hide-on-med-and-down"
+                title="Abrir">insert_drive_file</i></a></li>
+          <li><a id="quick-access--save" href="#!"><i class="material-icons hide-on-med-and-down"
+                title="Guardar">save</i></a></li>
+        </ul>
+        <div id="title" class="hide-on-med-and-down">ECED <span id="nombre-archivo-span"></span></div>
+      </div>
+    </nav>
+
+    <main class="row">
+      <div id="barra-herramientas" class="col s2 card">
+        <div class="row">
+          <div class="col">
+            <button class="boton" data-accion="sin-accion">
+              <img src="assets/img/icons/puntero.svg" width="35" title="Puntero (esc v)">
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <button class="boton" data-accion="crear-nodo" data-estado="0" width="35" title="Nodo de carga">
+              <img src="assets/img/icons/barra.svg" data-accion="crear-nodo" data-estado="0" width="35"
+                title="Nodo de carga (b)">
+            </button>
+          </div>
+
+          <div class="col">
+            <button class="boton" data-accion="crear-nodo" data-estado="1" width="35"
+              title="Barra principal subestación">
+              <img src="assets/img/icons/circulo.svg" data-accion="crear-nodo" data-estado="1" width="35"
+                title="Barra principal subestación (c)">
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <button class="boton" data-accion="crear-linea" data-estado="0" width="35"
+              title="Linea de transmisión sin llave">
+              <img src="assets/img/icons/linea-negra.svg" data-accion="crear-linea" data-estado="0" width="35"
+                title="Linea de transmisión sin llave (n)">
+
+            </button>
+          </div>
+
+          <div class="col">
+            <button class="boton" data-accion="crear-linea" data-estado="1" width="35"
+              title="Linea de transmisión con llave cerrada">
+              <img src="assets/img/icons/linea-roja.svg" data-accion="crear-linea" data-estado="1" width="35"
+                title="Linea de transmisión con llave cerrada (r)">
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <button class="boton" data-accion="crear-linea" data-estado="2" width="35"
+              title="Linea de transmisión con llave abierta">
+              <img src="assets/img/icons/linea-amarilla.svg" data-accion="crear-linea" data-estado="2" width="35"
+                title="Linea de transmisión con llave abierta (a)">
+
+            </button>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col">
+            <button id="guides-btn" class="boton" title="Activar o desactivar guías">
+              <img src="assets/img/icons/linea-guia.svg" width="35">
+            </button>
+          </div>
+
+          <div class="col">
+            <button id="grid-btn" class="boton" title="Activar o desactivar grilla">
+              <img src="assets/img/icons/cuadricula.svg" width="35">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s10 card-panel">
+        <div id="canvas-container"></div>
+      </div>
+  </div>
+  </div>
+
+  <div id="menu">
+    <div>
+      <button id="delete-button">Eliminar</button>
+    </div>
+    <div>
+      <button id="edit-button">Editar</button>
+    </div>
+    <div>
+      <button id="change-button">Cambiar</button>
+    </div>
+  </div>
+
+  <script src="assets/js/materialize.min.js"></script>
+  <script src="assets/js/libs/konva.min.js"></script>
+  <script src="assets/js/snapping.js"></script>
+  <script src="assets/js/grid.js"></script>
+  <script src="assets/js/modals.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

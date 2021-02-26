@@ -1,0 +1,115 @@
+body,
+html {
+  height: 100%;
+}
+
+#main-row,
+main,
+#main-row > div.col,
+main > div,
+#canvas-container {
+  height: 100%;
+}
+
+#navbar #logo-wrapper {
+  height: 60px;
+}
+
+#navbar #title {
+  padding-left: 50%;
+}
+
+main {
+  clear: both;
+}
+
+#main-row #barra-herramientas {
+  padding: 8px 16px;
+}
+
+#menu {
+  display: none;
+  position: absolute;
+  width: 90px;
+  background-color: white;
+  box-shadow: 0 0 5px grey;
+  border-radius: 3px;
+}
+
+#menu button {
+  width: 100%;
+  background-color: white;
+  border: none;
+  margin: 0;
+  padding: 10px;
+}
+
+#menu button:hover {
+  background-color: lightgray;
+}
+
+#barra-herramientas .boton {
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 5px #999;
+  padding: 20px;
+  background: white;
+  color: black;
+  border: 2px solid #b0bec5;
+  border-radius: 12px;
+}
+
+#barra-herramientas .boton:hover {
+  padding: 20px;
+  background-color: #e0e0e0;
+}
+
+#barra-herramientas .boton:active,
+#barra-herramientas .boton:focus {
+  background-color: #e0e0e0;
+}
+
+#barra-herramientas .boton:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#selector-formato-wrapper {
+  float: none;
+}
+
+#button li {
+  display: inline;
+}
+
+#button li a {
+  float: left;
+  padding: 2px;
+}
+
+#new-file-modal,
+#modal-save {
+  max-width: 420px;
+}
+
+#modal-save {
+  overflow-y: visible;
+}
+
+@media only screen and (max-width: 768px) {
+  #main-row #barra-herramientas {
+    padding: 12px 5px;
+  }
+  #barra-herramientas .boton {
+    padding: 5px;
+  }
+  #barra-herramientas .boton:hover {
+    padding: 5px;
+  }
+  #canvas-container {
+    height: 97%;
+  }
+  html {
+    height: 97%;
+  }
+}

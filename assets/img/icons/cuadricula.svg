@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="36mm"
+   height="36mm"
+   viewBox="0 0 36 36"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="cuadricula.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.896213"
+     inkscape:cx="142.4912"
+     inkscape:cy="65.029541"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:lockguides="false"
+     width="36mm"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#b3b3b3;stroke-width:1.00012"
+       id="rect106"
+       width="1.5348574"
+       height="30.697149"
+       x="9.3486776"
+       y="3.2092474" />
+    <rect
+       style="fill:#b3b3b3;stroke-width:1.00012"
+       id="rect106-7"
+       width="1.5348574"
+       height="30.697149"
+       x="24.208887"
+       y="3.2092478" />
+    <rect
+       style="fill:#b3b3b3;stroke-width:1.02038"
+       id="rect106-7-3"
+       width="1.5348599"
+       height="31.953129"
+       x="-12.93725"
+       y="2.1678426"
+       transform="matrix(0.00652687,-0.9999787,0.99998186,0.00602385,0,0)"
+       inkscape:transform-center-x="0.29048326" />
+    <rect
+       style="fill:#b3b3b3;stroke-width:1.02022"
+       id="rect106-7-3-0-9"
+       width="1.5348599"
+       height="31.943504"
+       x="-25.773945"
+       y="2.2612009"
+       transform="matrix(0.0065249,-0.99997871,0.99998185,0.00602566,0,0)"
+       inkscape:transform-center-x="0.29039633"
+       inkscape:transform-center-y="-1.0643535e-06" />
+  </g>
+</svg>
