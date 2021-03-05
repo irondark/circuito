@@ -196,3 +196,4 @@ function intoArray (id, lines) {
 	canvas.style.height = canvas_height + 'px';
 
 }
+

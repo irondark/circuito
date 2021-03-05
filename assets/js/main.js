@@ -7,6 +7,7 @@ const stage = new Konva.Stage({
   width: canvasContainer.offsetWidth,
   height: canvasContainer.offsetHeight,
 });
+
 const capaNodos = new Konva.Layer();
 const capaAristas = new Konva.Layer();
 const capaFondo = new Konva.Layer();
@@ -971,3 +972,5 @@ const toggleGrid = (() => {
 })();
 
 barraHerramientas.querySelector('#grid-btn').addEventListener('click', toggleGrid);
+
+      

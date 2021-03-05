@@ -97,6 +97,11 @@ main {
 }
 
 @media only screen and (max-width: 768px) {
+  body,
+  html {
+    height: 100%;
+  }
+
   #main-row #barra-herramientas {
     padding: 12px 5px;
   }
@@ -119,7 +124,7 @@ main {
   z-index: -100;
 }
 
-@media (max-width: 768px) and (orientation: landscape) {
+@media (max-width: 920px) and (orientation: landscape) {
   #landscape {
     display: flex;
     position: fixed;
