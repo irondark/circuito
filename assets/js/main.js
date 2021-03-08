@@ -4,8 +4,8 @@ const barraHerramientas = document.querySelector('#barra-herramientas');
 const botonesBarraHerramientas = document.querySelectorAll('#barra-herramientas button');
 const stage = new Konva.Stage({
   container: 'canvas-container',
-  width: 1200,
-  height: 750,
+  width: canvasContainer.offsetWidth,
+  height: canvasContainer.offsetHeight,
 });
 
 const capaNodos = new Konva.Layer();
