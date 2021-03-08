@@ -974,5 +974,3 @@ const toggleGrid = (() => {
 barraHerramientas.querySelector('#grid-btn').addEventListener('click', toggleGrid);
 
 
-
-
