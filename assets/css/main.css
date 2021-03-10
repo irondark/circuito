@@ -119,14 +119,14 @@ main {
   }
 }
 
-@media (max-width: 920px) and (orientation: landscape) {
+@media (max-width: 800px) and (orientation: landscape) {
   body,
   html {
     height: 130%;
   }
 
   #main-row #barra-herramientas {
-    padding: 12px 5px;
+    padding: 6px 3px;
   }
 
   #barra-herramientas .boton {
