@@ -122,7 +122,7 @@ main {
 @media (max-width: 768px) and (orientation: landscape) {
   body,
   html {
-    height: 123%;
+    height: 130%;
   }
 
   #main-row #barra-herramientas {
