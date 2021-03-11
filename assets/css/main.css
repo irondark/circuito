@@ -143,7 +143,7 @@ main {
 }
 
 /* Landscape */
-@media screen and (min-device-width: 360px) and (max-device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+@media screen and (min-device-width: 720px) and (max-device-height: 1520px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
   body,
   html {
     height: 117%;
