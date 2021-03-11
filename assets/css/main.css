@@ -143,29 +143,26 @@ main {
 }
 
 /* Landscape */
-@media only screen and (max-device-width: 640px) and (orientation: landscape) {
+@media only screen and (max-device-width: 768px) and (orientation: landscape) {
   body,
   html {
-    height: 120%;
+    height: 100%;
   }
 
   #main-row #barra-herramientas {
-    padding: 5px 25px;
+    padding: 12px 5px;
   }
-
   #barra-herramientas .boton {
-    padding: 3px;
+    padding: 5px;
   }
   #barra-herramientas .boton:hover {
-    padding: 3px;
+    padding: 5px;
   }
-
-  #main-row,
-  main,
-  #main-row > div.col,
-  main > div,
   #canvas-container {
-    height: 120%;
+    height: 97%;
+  }
+  html {
+    height: 97%;
   }
 }
 
