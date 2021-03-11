@@ -146,18 +146,18 @@ main {
 @media screen and (min-device-width: 360px) and (max-device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
   body,
   html {
-    height: 130%;
+    height: 115%;
   }
 
   #main-row #barra-herramientas {
-    padding: 6px 3px;
+    padding: 10px 20px;
   }
 
   #barra-herramientas .boton {
-    padding: 3px;
+    padding: 1px;
   }
   #barra-herramientas .boton:hover {
-    padding: 3px;
+    padding: 1px;
   }
 
   #canvas-container {
