@@ -146,11 +146,11 @@ main {
 @media only screen and (min-device-width: 720px) and (max-device-height: 1280px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
   body,
   html {
-    height: 150%;
+    height: 100%;
   }
 
   #main-row #barra-herramientas {
-    padding: 6px 3px;
+    padding: 10px 3px;
   }
 
   #barra-herramientas .boton {
