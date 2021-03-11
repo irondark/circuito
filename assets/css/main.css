@@ -146,7 +146,7 @@ main {
 @media screen and (min-device-width: 360px) and (max-device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
   body,
   html {
-    height: 180%;
+    height: 100%;
   }
 
   #main-row #barra-herramientas {
@@ -161,6 +161,6 @@ main {
   }
 
   #canvas-container {
-    height: 105%;
+    height: 100%;
   }
 }
