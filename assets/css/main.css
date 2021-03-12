@@ -143,10 +143,10 @@ main {
 }
 
 /* Landscape */
-@media only screen and (min-device-width: 360px) and (max-device-height: 760px) and (-webkit-device-pixel-ratio: 1) and (orientation: landscape) {
+@media only screen and (min-device-width: 360px) and (max-device-height: 760px) and (-webkit-device-pixel-ratio: 9) and (orientation: landscape) {
   body,
   html {
-    height: 150%;
+    height: 200%;
   }
 
   #main-row #barra-herramientas {
@@ -160,12 +160,8 @@ main {
     padding: 3px;
   }
 
-  #main-row,
-  main,
-  #main-row > div.col,
-  main > div,
   #canvas-container {
-    height: 160%;
+    height: 85%;
   }
 }
 
